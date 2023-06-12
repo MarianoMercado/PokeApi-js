@@ -41,8 +41,10 @@ const templatePokemon = (pokemon) => {
         <div class="card">
             <img src="${sprites.other.home.front_default}" alt="${name}">
             <h2>${name}</h2>
-            <p>Alto: ${height} m</p>
-            <p>Ancho: ${weight} kg</p>
+            <div class="card-altWd">
+              <p>Alto: ${height} m</p>
+              <p>Ancho: ${weight} kg</p>
+             </div>
                ${createTypeCards(types)}
 
         </div>
