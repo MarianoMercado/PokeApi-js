@@ -12,6 +12,7 @@
   --bg: #242657;
   --GoldenYellow: #ffde00;
   --GoldFoil: #b3a125;
+  --bg-black: rgba(7, 6, 6, 0.8);
 }
 header {
   height: 80px;
@@ -23,11 +24,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background: linear-gradient(
-    180deg,
-    var(--Red) 0% var(--GoldFoil) 50%,
-    var(--CeruleanBlue) 100%
-  );
+  background: transparent;
 }
 .logo {
   display: flex;
@@ -81,22 +78,6 @@ header {
   }
 }
 
-/* aside */
-
-aside {
-  width: 300px;
-  position: fixed;
-  padding: 1.25rem;
-  z-index: 100;
-  margin-top: 80px;
-}
-
-.menu-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 /* main */
 main {
   display: flex;
@@ -105,6 +86,10 @@ main {
   flex-direction: column;
   gap: 50px;
   height: 100vh;
+  background-image: url("./imagenes/Sin\ título.png");
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(to bottom, var(--Red), var(--CeruleanBlue)); */
   /* background: linear-gradient(
     var(--CeruleanBlue) 0%,
     var(--GoldFoil) 50%,
@@ -117,9 +102,7 @@ main {
     #004ec1 100%
   ); */
 }
-.LogoPizza {
-  height: 30px;
-}
+
 .search-container {
   display: flex;
   justify-content: end;
@@ -189,30 +172,33 @@ main {
 .card-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 
-.card img {
-  width: 300px;
-}
 .card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: var(--bg-black);
+  color: var(--white);
   /* background-image: linear-gradient(
     160deg,
     #9df2b9 0,
     #9df2b9 50%,
     #9df2b9 100%
   ); */
-  border: 1px solid #9df2b9;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid var(--GoldenYellow);
+  box-shadow: var(--GoldenYellow) 0px 5px 15px;
   padding: 1rem;
   border-radius: 0.5rem;
   height: 350px;
   width: 250px;
+}
+.card img {
+  width: 300px;
+  height: 250px;
 }
 .card-header {
   display: flex;
@@ -265,17 +251,9 @@ main {
   text-align: center;
   font-size: 25px;
   font-weight: 800;
-  display: none;
+  /* display: none; */
 }
 
 .search-container.success input {
   border: 1px solid #28a745;
 }
-
-/* .search-container {
-  color: #dc3545;
-  font-size: 1rem;
-  margin: 8px 0px;
-  max-width: 350px;
-  text-align: center;
-} */
